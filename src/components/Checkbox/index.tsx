@@ -15,13 +15,12 @@ const Checkbox: FC<CheckboxProps> = ({ name, label }) => {
   return (
     <div className={styles.checkboxWrapper}>
       <label className={styles.checkboxLabel}>
-        <input
-          type="checkbox"
-          {...field}
-          className={`${styles.checkbox} ${
+        <input type="checkbox" {...field} className={styles.checkboxInput} />
+        <span
+          className={`${styles.customCheckbox} ${
             meta.touched && meta.error ? styles.error : ''
           }`}
-        />
+        ></span>
         <span className={styles.checkboxText}>{label}</span>
       </label>
       {meta.touched && meta.error && (

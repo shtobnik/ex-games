@@ -1,18 +1,32 @@
+@import '../../scss/mixins';
+
 .inputBlock {
   margin-bottom: 24px;
+
+  @include desktop {
+    margin-bottom: 34px;
+    font-size: 34px;
+  }
 }
 
 .inputWrapper {
   background-color: $secondary-color;
-  // margin-bottom: 20px;
   margin-bottom: 6px;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 5px;
-  padding-right: 10px;
+  padding-right: 24px;
+  position: relative;
   border: 1px solid transparent;
+  height: 33px;
+
+  @include desktop {
+    height: 66px;
+    margin-bottom: 10px;
+    padding-right: 32px;
+  }
 
   &.error {
     border-color: $alert-color;
@@ -32,6 +46,11 @@
   color: $text-color;
   left: 15px;
   top: -5px;
+
+  @include desktop {
+    font-size: 12px;
+    padding-inline: 11px;
+  }
 }
 
 .input {
@@ -54,6 +73,11 @@
   color: $text-color;
   padding-left: 12px;
   position: relative;
+  // bottom: 10px;
+
+  @include desktop {
+    font-size: 14px;
+  }
 
   &::before {
     content: '';
@@ -77,4 +101,9 @@
   color: $alert-color;
   font-size: 12px;
   margin-top: 5px;
+  padding-left: 5px;
+
+  @include desktop {
+    font-size: 14px;
+  }
 }

@@ -27,8 +27,6 @@ const LanguageSwitcher = () => {
     (lang) => lang.code === selectedLanguage
   )?.code;
 
-  console.log('selectedFlag', selectedFlag);
-
   return (
     <div className={classNames(styles.languageDropdown, isOpen && styles.open)}>
       <div className={styles.selected} onClick={toggleDropdown}>

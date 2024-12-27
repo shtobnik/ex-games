@@ -1,0 +1,8 @@
+@import '../../scss/mixins';
+
+.icon {
+  @include desktop {
+    width: 24px;
+    height: auto;
+  }
+}

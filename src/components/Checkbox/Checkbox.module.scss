@@ -1,29 +1,84 @@
+@import '../../scss/mixins';
+
 .checkboxWrapper {
-  margin-bottom: 20px;
+  padding: 6px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 8px;
+  }
 }
 
 .checkboxLabel {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  color: $text-color;
+  cursor: pointer;
+  position: relative;
 }
 
-.checkbox {
-  margin-right: 10px;
-  transform: scale(1.2);
+.checkboxInput {
+  display: none;
+}
+
+.customCheckbox {
+  width: 11px;
+  height: 11px;
+  border: 2px solid $text-color;
+  background-color: $text-color;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+  margin-right: 8px;
+  box-sizing: border-box;
+
+  @include desktop {
+    width: 15px;
+    height: 15px;
+  }
+
+  &::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: $primary-color;
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+
+    @include desktop {
+      padding: 15px;
+    }
+  }
+}
+
+.checkboxInput:checked + .customCheckbox::after {
+  display: block;
+}
+
+.checkboxInput:focus + .customCheckbox {
+  border-color: $alert-color;
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.3);
 }
 
 .checkboxText {
-  display: inline-block;
+  color: $text-color;
+  font-size: 11px;
+
+  @include desktop {
+    padding: 15px;
+  }
 }
 
 .errorMessage {
-  color: red;
+  color: $alert-color;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .error {
-  border-color: red;
+  border-color: $alert-color !important;
 }

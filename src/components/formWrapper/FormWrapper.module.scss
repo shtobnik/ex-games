@@ -1,3 +1,5 @@
+@import '../../scss/mixins';
+
 .formWrapper {
   width: 100%;
   max-width: 1225px;
@@ -10,4 +12,8 @@
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
+
+  @include desktop {
+    max-width: 1723px;
+  }
 }

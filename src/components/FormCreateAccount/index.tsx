@@ -67,76 +67,80 @@ const FormCreateAccount: FC = () => {
         >
           {() => (
             <Form noValidate className={styles.formContent}>
-              <Input
-                name="userId"
-                type="text"
-                label="User ID"
-                icon="userID"
-                iconWidth="14px"
-                iconHeight="14px"
-              />
-              <Input
-                name="password"
-                type="password"
-                label="Password"
-                icon="password"
-                iconWidth="12px"
-                iconHeight="15px"
-                hint="8 characters minimum"
-              />
-              <Input
-                name="accountName"
-                type="text"
-                label="Account Name"
-                icon="accountName"
-                iconWidth="13px"
-                iconHeight="14px"
-                hint="Visible nickname for your profile"
-              />
-              <Input
-                name="email"
-                type="email"
-                label="Email"
-                icon="email"
-                iconWidth="14px"
-                iconHeight="12px"
-              />
-              <Input
-                name="verificationCode"
-                type="text"
-                label="Verification Code"
-                icon="email"
-                iconWidth="14px"
-                iconHeight="12px"
-              />
-              <Checkbox
-                name="termsOfService"
-                label={
-                  <>
-                    [Required] I read the{' '}
-                    <a className={styles.checkboxLink} href="#">
-                      Terms of Service
-                    </a>{' '}
-                    and I agree to the terms.
-                  </>
-                }
-              />
-              <Checkbox
-                name="privacyPolicy"
-                label={
-                  <>
-                    [Required] I read the{' '}
-                    <a className={styles.checkboxLink} href="#">
-                      Privacy Policy
-                    </a>{' '}
-                    and I agree to the terms.
-                  </>
-                }
-              />
-              <Checkbox
-                name="promotionalEmails"
-                label="[Optional] I would like to receive promotional emails."
-              />
+              <div className={styles.inputsWrapper}>
+                <Input
+                  name="userId"
+                  type="text"
+                  label="User ID"
+                  icon="userID"
+                  iconWidth="14px"
+                  iconHeight="14px"
+                />
+                <Input
+                  name="password"
+                  type="password"
+                  label="Password"
+                  icon="password"
+                  iconWidth="12px"
+                  iconHeight="15px"
+                  hint="8 characters minimum"
+                />
+                <Input
+                  name="accountName"
+                  type="text"
+                  label="Account Name"
+                  icon="accountName"
+                  iconWidth="13px"
+                  iconHeight="14px"
+                  hint="Visible nickname for your profile"
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  label="Email"
+                  icon="email"
+                  iconWidth="14px"
+                  iconHeight="12px"
+                />
+                <Input
+                  name="verificationCode"
+                  type="text"
+                  label="Verification Code"
+                  icon="email"
+                  iconWidth="14px"
+                  iconHeight="12px"
+                />
+              </div>
+              <div className={styles.checkboxes}>
+                <Checkbox
+                  name="termsOfService"
+                  label={
+                    <>
+                      [Required] I read the{' '}
+                      <a className={styles.checkboxLink} href="#">
+                        Terms of Service
+                      </a>{' '}
+                      and I agree to the terms.
+                    </>
+                  }
+                />
+                <Checkbox
+                  name="privacyPolicy"
+                  label={
+                    <>
+                      [Required] I read the{' '}
+                      <a className={styles.checkboxLink} href="#">
+                        Privacy Policy
+                      </a>{' '}
+                      and I agree to the terms.
+                    </>
+                  }
+                />
+                <Checkbox
+                  name="promotionalEmails"
+                  label="[Optional] I would like to receive promotional emails."
+                />
+              </div>
               <Button />
             </Form>
           )}

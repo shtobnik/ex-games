@@ -13,6 +13,7 @@
   box-sizing: border-box;
 
   @include desktop {
+    width: 868px;
     padding-top: 66px;
     padding-left: 126px;
   }
@@ -30,6 +31,18 @@
   margin-bottom: 41px;
 }
 
+.inputsWrapper {
+  & > div {
+    &:nth-last-child(2) {
+      margin-bottom: 42px;
+
+      @include desktop {
+        margin-bottom: 59px;
+      }
+    }
+  }
+}
+
 .checkboxLink {
   color: $text-color-second;
   text-decoration: none;
@@ -44,5 +57,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 126px;
+
+  @include desktop {
+    margin-bottom: 177px;
+  }
+}
+
+.checkboxes {
+  margin-bottom: 14px;
+
+  @include desktop {
+    margin-bottom: 19px;
+  }
 }
