@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 // Styles
 import styles from './FormBackground.module.scss';
 
 // Components
-import Logo from '../Logo';
+import Logo from '../logo';
 
 const FormBackground: FC = () => (
   <div className={styles.formBackground}>

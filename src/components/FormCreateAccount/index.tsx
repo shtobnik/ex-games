@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
@@ -6,13 +6,13 @@ import * as Yup from 'yup';
 import styles from './FormCreateAccount.module.scss';
 
 // Components
-import LanguageSwitcher from '../LanguageSwitcher';
-import Title from '../Title';
-import Input from '../Input';
-import Checkbox from '../Checkbox';
-import Button from '../Button';
-import Link from '../Link';
-import Icon from '../Icon';
+import LanguageSwitcher from '../languageSwitcher';
+import Title from '../title';
+import Input from '../input';
+import Checkbox from '../checkbox';
+import Button from '../button';
+import Link from '../link';
+import Icon from '../icon';
 
 const FormCreateAccount: FC = () => {
   const initialValues = {

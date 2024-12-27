@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { useField } from 'formik';
 
 // Styles
@@ -6,7 +6,7 @@ import styles from './Checkbox.module.scss';
 
 type CheckboxProps = {
   name: string;
-  label: React.ReactNode;
+  label: ReactNode;
 };
 
 const Checkbox: FC<CheckboxProps> = ({ name, label }) => {

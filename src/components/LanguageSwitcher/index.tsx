@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 
 // Styles
 import styles from './LanguageSwitcher.module.scss';
 
 // Components
-import Icon from '../Icon';
+import Icon from '../icon';
 
 const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 // Styles
 import styles from './Title.module.scss';
 
 // Components
-import Link from '../Link';
+import Link from '../link';
 
 const Title: FC = () => (
   <div className={styles.titleWrapper}>

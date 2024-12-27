@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useField } from 'formik';
 
 // Styles
 import styles from './Input.module.scss';
 
 // Components
-import Icon from '../Icon';
+import Icon from '../icon';
 
 type InputProps = {
   label: string;
