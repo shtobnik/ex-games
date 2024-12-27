@@ -36,10 +36,10 @@
 
   .dropdown {
     position: absolute;
-    top: 28px;
-    left: 0;
+    top: 27px;
+    right: 22px;
     background: $secondary-color;
-    border-radius: 8px;
+    border-radius: 8px 0 8px 8px;
     border: 1px solid $secondary-color;
     box-shadow: 0 4px 8px $primary-color;
     overflow: hidden;
@@ -73,10 +73,6 @@
   &.open {
     .selected {
       border-radius: 50% 50% 0 0;
-    }
-
-    .dropdown {
-      border-radius: 0 8px 8px 8px;
     }
   }
 }

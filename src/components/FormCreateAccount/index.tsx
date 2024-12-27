@@ -101,6 +101,7 @@ const FormCreateAccount: FC = () => {
                   icon="email"
                   iconWidth="14px"
                   iconHeight="12px"
+                  isResend
                 />
                 <Input
                   name="verificationCode"

@@ -6,6 +6,7 @@ import styles from './Input.module.scss';
 
 // Components
 import Icon from '../icon';
+import Resend from '../resend';
 
 type InputProps = {
   label: string;
@@ -15,6 +16,7 @@ type InputProps = {
   iconWidth?: string;
   iconHeight?: string;
   hint?: string;
+  isResend?: boolean;
 };
 
 const Input: FC<InputProps> = ({
@@ -25,6 +27,7 @@ const Input: FC<InputProps> = ({
   iconWidth,
   iconHeight,
   hint,
+  isResend,
 }) => {
   const [field, meta] = useField(name);
 
@@ -46,6 +49,7 @@ const Input: FC<InputProps> = ({
             meta.touched && meta.error ? styles.error : ''
           }`}
         />
+        {isResend ? <Resend /> : ''}
         <Icon
           image={icon}
           width={iconWidth}
