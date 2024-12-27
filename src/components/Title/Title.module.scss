@@ -1,7 +1,14 @@
+@import '../../scss/mixins';
+
 .titleWrapper {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  margin-bottom: 44px;
+
+  @include desktop {
+    margin-bottom: 62px;
+  }
 }
 
 .title {
@@ -17,6 +24,11 @@
 
 .isExist {
   font-size: 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 .text {

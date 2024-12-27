@@ -1,8 +1,25 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
+import classNames from 'classnames';
 
 // Styles
-import styles from './Logo.module.scss';
+import styles from './Link.module.scss';
 
-const Logo: FC = () => <div className={styles.logo}></div>;
+export type LinkType = {
+  url?: string;
+  isIcon?: boolean;
+  color?: string;
+  children?: ReactNode;
+};
 
-export default Logo;
+const Link: FC<LinkType> = ({ url, isIcon, color, children }) => {
+  const linkClass = classNames(styles.link, {
+    [styles[color as keyof typeof styles]]: color, // Додаємо динамічний клас, якщо `color` передано
+  });
+  return (
+    <a href={url} target="_blank" rel="noreferrer" className={linkClass}>
+      {children}
+    </a>
+  );
+};
+
+export default Link;

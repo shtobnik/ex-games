@@ -14,11 +14,8 @@
   padding: 31px;
   box-sizing: border-box;
   flex-shrink: 0;
-
-  @include laptop {
-    width: 568px;
-    height: 725px;
-  }
+  width: 568px;
+  height: 725px;
 
   @include desktop {
     width: 1024px;

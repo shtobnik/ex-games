@@ -1,12 +1,27 @@
+@import '../../scss/mixins';
+
 .formWrapper {
   width: 618px;
   height: 100%;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 13px;
+  padding-left: 90px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding-top: 66px;
+    padding-left: 126px;
+  }
 }
 
 .form {
+  width: 432px;
+
+  @include desktop {
+    width: 606px;
+  }
 }

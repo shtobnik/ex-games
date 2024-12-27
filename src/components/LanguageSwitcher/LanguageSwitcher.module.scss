@@ -1,5 +1,12 @@
+@import '../../scss/mixins';
+
 .languageSwitcher {
   width: 28px;
   height: 28px;
   background-color: $primary-color;
+  margin-bottom: 34px;
+
+  @include desktop {
+    margin-bottom: 48px;
+  }
 }
