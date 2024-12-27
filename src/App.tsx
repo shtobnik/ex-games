@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './App.scss';
-import FormWrapper from './components/formWrapper';
+import FormWrapper from './components/FormWrapper';
 
 const App: FC = () => <FormWrapper />;
 

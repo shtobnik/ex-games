@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import styles from './FormBackground.module.scss';
 
 // Components
-import Logo from '../logo';
+import Logo from '../Logo';
 
 const FormBackground: FC = () => (
   <div className={styles.formBackground}>

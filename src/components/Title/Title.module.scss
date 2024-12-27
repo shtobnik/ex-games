@@ -1,0 +1,24 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.title {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0;
+
+  .accent {
+    color: $alert-color;
+  }
+}
+
+.isExist {
+  font-size: 11px;
+}
+
+.text {
+  color: $text-color;
+}

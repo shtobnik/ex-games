@@ -1,3 +1,5 @@
+@import '../../scss/mixins';
+
 .formBackground {
   width: 800px;
   height: 1020px;
@@ -11,4 +13,15 @@
   color: $white-color;
   padding: 31px;
   box-sizing: border-box;
+  flex-shrink: 0;
+
+  @include laptop {
+    width: 568px;
+    height: 725px;
+  }
+
+  @include desktop {
+    width: 1024px;
+    height: 1366px;
+  }
 }
