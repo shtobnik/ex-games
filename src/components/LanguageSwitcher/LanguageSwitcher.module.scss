@@ -1,12 +1,66 @@
-@import '../../scss/mixins';
+.languageDropdown {
+  position: relative;
+  color: $text-color-second;
+  align-self: flex-end;
+  width: 50px;
 
-.languageSwitcher {
-  width: 28px;
-  height: 28px;
-  background-color: $primary-color;
-  margin-bottom: 34px;
+  .selected {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
 
-  @include desktop {
-    margin-bottom: 48px;
+    .flag {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: $secondary-color;
+    border-radius: 8px;
+    border: 1px solid $secondary-color;
+    box-shadow: 0 4px 8px $primary-color;
+    overflow: hidden;
+    transition: all ease-in-out 0.2s;
+    z-index: 10;
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: $primary-color;
+      }
+
+      .flag {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &.open {
+    .selected {
+      border-radius: 50% 50% 0 0;
+    }
+
+    .dropdown {
+      border-radius: 0 8px 8px 8px;
+    }
   }
 }

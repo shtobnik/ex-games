@@ -22,7 +22,7 @@ const Icon: FC<IIcon> = ({
 }) => (
   <svg className={styles.icon} width={width} height={height} color={color}>
     <use
-      href={`/images/sprite.svg?0.1#${image}`}
+      href={`/images/sprite.svg?0.3#${image}`}
       fillRule={fillRule}
       clipRule={clipRule}
     />
