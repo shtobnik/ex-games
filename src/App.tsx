@@ -1,9 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
 import './App.scss';
+import FormWrapper from './components/formWrapper';
 
-function App() {
-  return <section className="wrapper"></section>;
-}
+const App: FC = () => <FormWrapper />;
 
 export default App;
