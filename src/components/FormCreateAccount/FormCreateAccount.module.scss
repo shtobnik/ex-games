@@ -25,3 +25,24 @@
     width: 606px;
   }
 }
+
+.formContent {
+  margin-bottom: 41px;
+}
+
+.checkboxLink {
+  color: $text-color-second;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

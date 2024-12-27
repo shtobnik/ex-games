@@ -6,14 +6,14 @@ import styles from './Link.module.scss';
 
 export type LinkType = {
   url?: string;
-  isIcon?: boolean;
+  icon?: string;
   color?: string;
   children?: ReactNode;
 };
 
-const Link: FC<LinkType> = ({ url, isIcon, color, children }) => {
+const Link: FC<LinkType> = ({ url, icon, color, children }) => {
   const linkClass = classNames(styles.link, {
-    [styles[color as keyof typeof styles]]: color, // Додаємо динамічний клас, якщо `color` передано
+    [styles[color as keyof typeof styles]]: color,
   });
   return (
     <a href={url} target="_blank" rel="noreferrer" className={linkClass}>

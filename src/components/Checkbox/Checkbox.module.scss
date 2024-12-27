@@ -1,0 +1,29 @@
+.checkboxWrapper {
+  margin-bottom: 20px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: $text-color;
+}
+
+.checkbox {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.checkboxText {
+  display: inline-block;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error {
+  border-color: red;
+}

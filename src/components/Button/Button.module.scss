@@ -1,0 +1,17 @@
+.button {
+  width: 100%;
+  height: 34px;
+  background-color: $alert-color;
+  border: none;
+  color: $white-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d62828;
+  }
+
+  &:active {
+    background-color: #b22222;
+    transform: scale(0.98);
+  }
+}

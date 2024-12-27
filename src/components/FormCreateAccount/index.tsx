@@ -9,6 +9,10 @@ import styles from './FormCreateAccount.module.scss';
 import LanguageSwitcher from '../LanguageSwitcher';
 import Title from '../Title';
 import Input from '../Input';
+import Checkbox from '../Checkbox';
+import Button from '../Button';
+import Link from '../Link';
+import Icon from '../Icon';
 
 const FormCreateAccount: FC = () => {
   const initialValues = {
@@ -17,24 +21,34 @@ const FormCreateAccount: FC = () => {
     accountName: '',
     email: '',
     verificationCode: '',
+    termsOfService: false,
+    privacyPolicy: false,
+    promotionalEmails: false,
   };
 
   const validationSchema = Yup.object({
     userId: Yup.string()
-      .required('userId is required')
-      .min(2, 'userId must be at least 2 characters'),
+      .required('User ID is required')
+      .min(2, 'User ID must be at least 2 characters'),
     password: Yup.string()
       .required('Password is required')
       .min(6, 'Password must be at least 6 characters'),
     accountName: Yup.string()
-      .required('accountName is required')
-      .min(2, 'accountName must be at least 2 characters'),
+      .required('Account Name is required')
+      .min(2, 'Account Name must be at least 2 characters'),
     email: Yup.string()
       .email('Invalid email format')
       .required('Email is required'),
     verificationCode: Yup.string()
-      .required('verificationCode is required')
-      .min(2, 'verificationCode must be at least 2 characters'),
+      .required('Verification Code is required')
+      .min(2, 'Verification Code must be at least 2 characters'),
+    termsOfService: Yup.boolean()
+      .required('You must accept the Terms of Service')
+      .oneOf([true], 'You must accept the Terms of Service'),
+    privacyPolicy: Yup.boolean()
+      .required('You must accept the Privacy Policy')
+      .oneOf([true], 'You must accept the Privacy Policy'),
+    promotionalEmails: Yup.boolean(), // Цей чекбокс необов'язковий
   });
 
   const onSubmit = (values: typeof initialValues) => {
@@ -52,7 +66,7 @@ const FormCreateAccount: FC = () => {
           onSubmit={onSubmit}
         >
           {() => (
-            <Form noValidate>
+            <Form noValidate className={styles.formContent}>
               <Input
                 name="userId"
                 type="text"
@@ -68,7 +82,7 @@ const FormCreateAccount: FC = () => {
                 icon="password"
                 iconWidth="12px"
                 iconHeight="15px"
-                hint="8 characters minimun"
+                hint="8 characters minimum"
               />
               <Input
                 name="accountName"
@@ -95,10 +109,52 @@ const FormCreateAccount: FC = () => {
                 iconWidth="14px"
                 iconHeight="12px"
               />
-              <button type="submit">Submit</button>
+              <Checkbox
+                name="termsOfService"
+                label={
+                  <>
+                    [Required] I read the{' '}
+                    <a className={styles.checkboxLink} href="#">
+                      Terms of Service
+                    </a>{' '}
+                    and I agree to the terms.
+                  </>
+                }
+              />
+              <Checkbox
+                name="privacyPolicy"
+                label={
+                  <>
+                    [Required] I read the{' '}
+                    <a className={styles.checkboxLink} href="#">
+                      Privacy Policy
+                    </a>{' '}
+                    and I agree to the terms.
+                  </>
+                }
+              />
+              <Checkbox
+                name="promotionalEmails"
+                label="[Optional] I would like to receive promotional emails."
+              />
+              <Button />
             </Form>
           )}
         </Formik>
+        <div className={styles.footer}>
+          <Link color="grey">
+            <Icon
+              image={'support'}
+              width={'14px'}
+              height={'16px'}
+              color={'#7e6969'}
+              fillRule="evenodd"
+              clipRule="evenodd"
+            />
+            Have Promo Code?
+          </Link>
+          <Link color="grey">Contact Support</Link>
+        </div>
       </div>
     </section>
   );

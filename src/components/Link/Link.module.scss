@@ -1,5 +1,11 @@
 .link {
   text-decoration: none;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
 
   &:hover {
     text-decoration: underline;
@@ -7,5 +13,9 @@
 
   &.red {
     color: $alert-color;
+  }
+
+  &.grey {
+    color: $text-color;
   }
 }
