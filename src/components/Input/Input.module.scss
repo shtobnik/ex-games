@@ -71,12 +71,12 @@
 .hint {
   font-size: 10px;
   color: $text-color;
-  padding-left: 12px;
+  padding-left: 11px;
   position: relative;
-  // bottom: 10px;
 
   @include desktop {
     font-size: 14px;
+    padding-left: 14px;
   }
 
   &::before {
